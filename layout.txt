@@ -1,0 +1,69 @@
+AlphaCouncil/
+├── __init__.py
+├── main.py
+├── requirements.txt
+├── .env
+├── .env.example
+├── README.md
+│
+├── agent/
+│   ├── __init__.py
+│   ├── schemas.py
+│   ├── indicator_agent.py
+│   ├── fundamental_agent.py
+│   └── recommendation_agent.py
+│
+├── tools/
+│   ├── __init__.py
+│   ├── market_data.py
+│   ├── technical_indicators.py
+│   ├── technical_indicators_tool.py
+│   └── fundamentals_tool.py
+│
+├── council/
+│   ├── __init__.py
+│   ├── council.py
+│   ├── policy.py
+│   └── output_parser.py
+│
+├── infrastructure/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── cache.py
+│   ├── reliability.py
+│   ├── provenance.py
+│   ├── persistence.py
+│   └── history.py
+│
+├── evaluation/
+│   ├── __init__.py
+│   ├── metrics.py
+│   ├── evaluate_specialists.py
+│   └── calibrate_confidence.py
+│
+├── backtest/
+│   ├── __init__.py
+│   ├── engine.py
+│   ├── costs.py
+│   ├── portfolio.py
+│   ├── walk_forward.py
+│   └── benchmarks.py
+│
+├── discovery/
+│   ├── __init__.py
+│   ├── equity_tracker.py
+│   ├── stocktwits_source.py
+│   ├── reddit_source.py
+│   ├── xueqiu_source.py
+│   └── akshare_source.py
+│
+└── llm/
+    ├── __init__.py
+    ├── factory.py
+    ├── LoadbyGoogle.py
+    ├── LoadbyHFLocalonly.py
+    ├── LoadbyHuggingFace.py
+    ├── LoadbyLlamaCpp.py
+    ├── LoadbyNvidia.py
+    ├── LoadbyOllama.py
+    └── LoadbyOpenRouter.py

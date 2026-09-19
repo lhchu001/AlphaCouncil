@@ -1,0 +1,37 @@
+main.py
+   │
+   ├─ load .env, Settings
+   ├─ build recommendation graph once
+   └─ invoke with UserRequest
+          │
+          ├─ parallel:
+          │     ├─ technical_agent
+          │     │    ├─ cached OHLCV + provenance
+          │     │    ├─ deterministic indicators
+          │     │    └─ LLM interpretation (validated JSON)
+          │     │
+          │     └─ fundamental_agent
+          │          ├─ cached fundamentals + provenance
+          │          ├─ deterministic ratios
+          │          └─ LLM interpretation (validated JSON)
+          │
+          ▼
+      combine_decision
+          ├─ compute score, confidence
+          ├─ data quality & freshness checks
+          ├─ risk flags
+          ├─ decide: Council or local
+          └─ decide: human review required
+          │
+          ├─ local ─────────────────► final_analysis
+          │
+          └─ Council ───────────────►
+               ├─ bull/bear/neutral/chairman models
+               ├─ abstention allowed
+               └─ chairman synthesis
+          │
+          ▼
+      append to signal_history.jsonl
+          │
+          ▼
+      terminal report / API / dashboard
